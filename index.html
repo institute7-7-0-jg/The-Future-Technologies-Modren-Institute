@@ -1,35 +1,38 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="معهد تقنيات المستقبل الحديثة للعلوم الطبية والإدارية - لسنا الوحيدين، لكننا الأفضل.">
-    <title>معهد تقنيات المستقبل الحديثة</title>
-    
+    <meta name="description"
+        content="معهد تقنيات المستقبل الحديثة للعلوم الطبية والإدارية - لسنا الوحيدين، لكننا الأفضل.">
+    <title>معهد تقنيات المستقبل الحديث للعلوم الطبية والإدارية</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         /* CSS Variables & Theming */
         :root {
-            --primary: #7C3AED;
-            --primary-light: #9d63f2;
-            --secondary: #F472B6;
-            --bg-main: #FFFFFF;
-            --bg-alt: #F8FAFC;
+            --primary: #ce4919;
+            --primary-light: #38f35e;
+            --secondary: #e12b21;
+            --bg-main: #ffffff;
+            --bg-alt: #f8fbfc;
             --text-main: #334155;
             --text-muted: #64748B;
             --nav-bg: rgba(255, 255, 255, 0.95);
             --card-bg: #FFFFFF;
             --border: #E2E8F0;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease-in-out;
         }
 
@@ -41,9 +44,9 @@
             --nav-bg: rgba(15, 23, 42, 0.95);
             --card-bg: #1E293B;
             --border: #334155;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.5);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.881);
         }
 
         /* Reset & Base */
@@ -73,7 +76,8 @@
             color: inherit;
         }
 
-        ul, ol {
+        ul,
+        ol {
             list-style: none;
         }
 
@@ -221,41 +225,60 @@
         }
 
         /* Hero Section */
-        .hero {
-            height: 100vh;
+        .hero-split {
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            position: relative;
-            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
-            color: white;
-            text-align: center;
-            padding-top: 80px;
+            padding-top: 100px;
+            padding-bottom: 50px;
+            background-color: var(--bg-main);
+            color: var(--text-main);
         }
 
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
+        .hero-split .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            flex-wrap: wrap;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
+        .hero-text-content {
+            flex: 1;
+            min-width: 300px;
+            text-align: right;
+        }
+
+        .hero-text-content h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--primary);
             margin-bottom: 1rem;
+            line-height: 1.3;
             animation: fadeInUp 1s ease;
         }
 
-        .hero h2 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: var(--secondary);
+        .hero-text-content p {
+            font-size: 1.2rem;
             margin-bottom: 1.5rem;
+            color: var(--text-muted);
             animation: fadeInUp 1s ease 0.2s backwards;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
+        .hero-image-content {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
             animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .hero-image-content img {
+            max-width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 16px;
         }
 
         .btn {
@@ -285,13 +308,13 @@
 
         .btn-secondary {
             background: transparent;
-            color: white;
-            border: 2px solid white;
+            color: var(--text-main);
+            border: 2px solid var(--text-main);
         }
 
         .btn-secondary:hover {
-            background: white;
-            color: var(--text-main);
+            background: var(--text-main);
+            color: var(--bg-main);
             transform: translateY(-3px);
         }
 
@@ -335,7 +358,8 @@
             border-radius: 12px;
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border);
-            border-right: 4px solid var(--primary); /* RTL Adjustment */
+            border-right: 4px solid var(--primary);
+            /* RTL Adjustment */
         }
 
         /* Departments */
@@ -376,7 +400,8 @@
             content: '';
             position: absolute;
             top: 0;
-            right: 0; /* RTL Adjustment */
+            right: 0;
+            /* RTL Adjustment */
             width: 100%;
             height: 4px;
             background: linear-gradient(90deg, var(--secondary), var(--primary));
@@ -423,7 +448,7 @@
             color: var(--primary);
             margin-bottom: 0.5rem;
         }
-        
+
         .stat-label {
             font-size: 1.2rem;
             font-weight: 600;
@@ -479,7 +504,8 @@
 
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
+            padding-bottom: 56.25%;
+            /* 16:9 */
             height: 0;
             border-radius: 16px;
             overflow: hidden;
@@ -541,7 +567,8 @@
 
         .steps-list li {
             position: relative;
-            padding-right: 3rem; /* RTL Adjustment */
+            padding-right: 3rem;
+            /* RTL Adjustment */
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
         }
@@ -550,7 +577,8 @@
             counter-increment: admission-counter;
             content: counter(admission-counter);
             position: absolute;
-            right: 0; /* RTL Adjustment */
+            right: 0;
+            /* RTL Adjustment */
             top: 2px;
             width: 30px;
             height: 30px;
@@ -585,7 +613,8 @@
         .faq-question {
             width: 100%;
             padding: 1.5rem;
-            text-align: right; /* RTL Adjustment */
+            text-align: right;
+            /* RTL Adjustment */
             background: var(--card-bg);
             border: none;
             font-size: 1.2rem;
@@ -695,7 +724,7 @@
         .footer-links li {
             margin-bottom: 0.8rem;
         }
-        
+
         .footer-links a:hover {
             color: var(--primary);
         }
@@ -736,7 +765,8 @@
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
-            left: 30px; /* Kept left for LTR standard or could move to right */
+            left: 30px;
+            /* Kept left for LTR standard or could move to right */
             width: 60px;
             height: 60px;
             background: #25D366;
@@ -789,6 +819,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -811,7 +842,8 @@
             .nav-links {
                 position: absolute;
                 top: 80px;
-                right: -100%; /* RTL Adjustment */
+                right: -100%;
+                /* RTL Adjustment */
                 width: 100%;
                 background: var(--card-bg);
                 flex-direction: column;
@@ -822,7 +854,8 @@
             }
 
             .nav-links.active {
-                right: 0; /* RTL Adjustment */
+                right: 0;
+                /* RTL Adjustment */
             }
 
             .mobile-toggle {
@@ -836,23 +869,27 @@
                 visibility: visible;
                 display: none;
                 border: none;
-                padding-right: 1rem; /* RTL Adjustment */
+                padding-right: 1rem;
+                /* RTL Adjustment */
             }
 
             .dropdown.active .dropdown-menu {
                 display: block;
             }
-            
+
             .hero h1 {
                 font-size: 2.5rem;
             }
 
-            .about-grid, .admission-grid, .contact-grid {
+            .about-grid,
+            .admission-grid,
+            .contact-grid {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -860,21 +897,22 @@
         <div class="container nav-container">
             <a href="#" class="logo">
                 <i class="fas fa-graduation-cap"></i>
-                معهد تقنيات المستقبل
+                <p></p> معهد تقنيات المستقبل الحديث للعلوم الطبية والادارية.
             </a>
-            
+
             <ul class="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#about">عن المعهد</a></li>
                 <li class="dropdown">
-                    <a href="#departments">الأقسام <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-right: 5px;"></i></a>
+                    <a href="#departments">الأقسام <i class="fas fa-chevron-down"
+                            style="font-size: 0.8em; margin-right: 5px;"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="#medical">الأقسام الطبية</a></li>
                         <li><a href="#admin">الأقسام الإدارية</a></li>
                     </ul>
                 </li>
                 <li><a href="#admission">التسجيل</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
+                <li><a href="#features">مميزات المعهد</a></li>
                 <li>
                     <button class="theme-toggle" id="theme-toggle" aria-label="تبديل المظهر">
                         <i class="fas fa-moon"></i>
@@ -889,15 +927,21 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1>معهد تقنيات المستقبل الحديثة</h1>
-            <h2>للعلوم الطبية والإدارية</h2>
-            <p>"لسنا الوحيدين، لكننا الأفضل."</p>
-            <p>معهد تقنيات المستقبل الحديثة للعلوم الطبية والإدارية هو معهد تعليمي وتدريبي متخصص يكرس جهوده لتقديم برامج أكاديمية عالية الجودة ودورات دبلوم مهنية تزود الطلاب بالمعرفة النظرية والمهارات العملية من خلال بيئة تعليمية حديثة ونخبة من المدربين المؤهلين.</p>
-            <div class="hero-btns">
-                <a href="#admission" class="btn btn-primary">سجل الآن</a>
-                <a href="#contact" class="btn btn-secondary">تواصل معنا</a>
+    <section id="home" class="hero-split">
+        <div class="container">
+            <div class="hero-text-content">
+                <h4>معهد تقنيات المستقبل الحديث للعلوم الطبية والادارية .</h4><br><br>
+                <h3>معهدنا.. حيث يلتقي العلم التطبيقي بالخبرة .</h3><br><br>
+                <p>معهد تقنيات المستقبل الحديث للعلوم الطبية والإدارية هو معهد تعليمي وتدريبي متخصص يكرس جهوده لتقديم
+                    برامج أكاديمية عالية الجودة ودورات دبلوم مهنية تزود الطلاب بالمعرفة النظرية والمهارات العملية من
+                    خلال بيئة تعليمية حديثة ونخبة من المدربين المؤهلين.</p>
+                <div class="hero-btns" style="justify-content: flex-start;">
+                    <a href="#admission" class="btn btn-primary">سجل الآن</a>
+                    <a href="#features" class="btn btn-primary">مميزات المعهد</a>
+                </div>
+            </div>
+            <div class="hero-image-content">
+                <img src="hero.jpg" alt="معهد تقنيات المستقبل">
             </div>
         </div>
     </section>
@@ -908,8 +952,9 @@
         <div class="about-grid">
             <div class="about-text">
                 <h3>نبذة</h3>
-                <p>تأسس معهد تقنيات المستقبل الحديثة للعلوم الطبية والإدارية في عام 2020 لتقديم تعليم متميز في المجالات الطبية والإدارية مع إعداد خريجين مؤهلين لسوق العمل التنافسي اليوم.</p>
-                
+                <p>تأسس معهد تقنيات المستقبل الحديث للعلوم الطبية والإدارية في عام 2020 لتقديم تعليم متميز في المجالات
+                    الطبية والإدارية مع إعداد خريجين مؤهلين لسوق العمل التنافسي اليوم.</p>
+
                 <h3>الرؤية</h3>
                 <p>أن نصبح من المعاهد التعليمية الرائدة من خلال تقديم تعليم مبتكر وتخريج كوادر مهنية عالية التأهيل.</p>
 
@@ -917,34 +962,40 @@
                 <p>تقديم تعليم عالي الجودة يجمع بين المعرفة الأكاديمية والتدريب العملي في بيئة تعليمية حديثة.</p>
             </div>
             <div>
-                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="الحرم الجامعي" style="border-radius: 16px; box-shadow: var(--shadow-md);">
-                <div class="about-features">
-                    <div class="about-feature-card">
-                        <i class="fas fa-check-circle" style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;"></i>
-                        <h4>إعداد خريجين أكفاء</h4>
-                    </div>
-                    <div class="about-feature-card">
-                        <i class="fas fa-check-circle" style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;"></i>
-                        <h4>تطوير المهارات الفنية</h4>
-                    </div>
-                    <div class="about-feature-card">
-                        <i class="fas fa-check-circle" style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;"></i>
-                        <h4>تشجيع الابتكار</h4>
-                    </div>
-                    <div class="about-feature-card">
-                        <i class="fas fa-check-circle" style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;"></i>
-                        <h4>تلبية احتياجات سوق العمل</h4>
+
+                <div class="container reveal">
+                    <h2 class="section-title">الاهداف</h2>
+                    <div class="about-features">
+                        <div class="about-feature-card">
+                            <i class="fas fa-check-circle"
+                                style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;"></i>
+                            <h4>إعداد خريجين أكفاء</h4>
+                        </div>
+                        <div class="about-feature-card">
+                            <i class="fas fa-check-circle"
+                                style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;"></i>
+                            <h4>تطوير المهارات الفنية</h4>
+                        </div>
+                        <div class="about-feature-card">
+                            <i class="fas fa-check-circle"
+                                style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;"></i>
+                            <h4>تشجيع الابتكار</h4>
+                        </div>
+                        <div class="about-feature-card">
+                            <i class="fas fa-check-circle"
+                                style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;"></i>
+                            <h4>تلبية احتياجات سوق العمل</h4>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Departments Section -->
     <section id="departments" class="bg-alt">
         <div class="container reveal">
-            <h2 class="section-title">الأقسام والبرامج الأكاديمية</h2>
-            
+            <h2 class="section-title">الأقسام الأكاديمية</h2>
+
             <div id="medical" class="dept-category">
                 <h3><i class="fas fa-heartbeat"></i> الأقسام الطبية</h3>
                 <div class="cards-grid">
@@ -952,7 +1003,8 @@
                         <i class="fas fa-user-md card-icon"></i>
                         <h4 class="card-title">مساعد طبيب</h4>
                         <span class="card-duration">مدة الدراسة: 3 سنوات</span>
-                        <p>إعداد الطلاب لمساعدة الأطباء في المستشفيات والمراكز الطبية من خلال التدريب السريري العملي.</p>
+                        <p>إعداد الطلاب لمساعدة الأطباء في المستشفيات والمراكز الطبية من خلال التدريب السريري العملي.
+                        </p>
                     </div>
                     <div class="card">
                         <i class="fas fa-microscope card-icon"></i>
@@ -1051,23 +1103,6 @@
             </div>
         </div>
 
-        <div class="stats-grid" id="statistics">
-            <div class="stat-card">
-                <div class="stat-number" data-target="1000">0</div>
-                <div class="stat-label">طالب</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" data-target="40">0</div>
-                <div class="stat-label">مدرب</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" data-target="9">0</div>
-                <div class="stat-label">برامج أكاديمية</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" data-target="2020">0</div>
-                <div class="stat-label">سنة التأسيس</div>
-            </div>
         </div>
     </section>
 
@@ -1080,14 +1115,19 @@
         <div class="container">
             <h2 class="section-title">إنجازات المعهد</h2>
             <div class="cards-grid" style="grid-template-columns: 1fr;">
-                <div class="card" style="text-align: center; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; padding: 3rem;">
-                    <i class="fas fa-trophy card-icon" style="font-size: 4rem; color: #fbbf24; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 1rem;">المركز الأول على مستوى الجمهورية</h3>
+                <div class="card"
+                    style="text-align: center; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; padding: 3rem;">
+                    <i class="fas fa-trophy card-icon"
+                        style="font-size: 4rem; color: #fbbf24; margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 1rem;">المركز الأول على مستوى
+                        معاهد الجمهورية</h3>
                     <p style="font-size: 1.2rem; color: var(--text-main); margin-bottom: 1.5rem;">
-                        نفخر في معهد تقنيات المستقبل بحصول طالبتنا المتميزة <strong>أزال الدعيس</strong> على المركز الأول في قسم المحاسبة على مستوى جميع المعاهد في الجمهورية اليمنية.
+                        نفخر في معهد تقنيات المستقبل بحصول طالبتنا المتميزة <strong>أزال الدعيس</strong> على المركز
+                        الأول في قسم المحاسبة على مستوى جميع المعاهد في الجمهورية اليمنية.
                     </p>
-                    <span style="display: inline-block; background: var(--primary); color: white; padding: 8px 20px; border-radius: 30px; font-weight: 700;">
-                        الطالبة: أزال الدعيس - قسم المحاسبة
+                    <span
+                        style="display: inline-block; background: var(--primary); color: white; padding: 8px 20px; border-radius: 30px; font-weight: 700;">
+
                     </span>
                 </div>
             </div>
@@ -1105,17 +1145,18 @@
                     <ul style="list-style: disc; padding-right: 1.5rem; margin-bottom: 2rem;">
                         <li style="margin-bottom: 0.5rem;">شهادة الثانوية العامة (أو ما يعادلها).</li>
                         <li style="margin-bottom: 0.5rem;">المستندات الشخصية المطلوبة.</li>
-                        <li style="margin-bottom: 0.5rem;">صور شخصية بحجم جواز السفر.</li>
+                        <li style="margin-bottom: 0.5rem;">صور شخصية .</li>
                     </ul>
 
                     <h3 style="color: var(--primary); margin-bottom: 1.5rem;">الرسوم الدراسية</h3>
                     <div class="card" style="padding: 1.5rem; background: var(--bg-alt); margin-bottom: 2rem;">
                         <p><strong>البرامج الطبية:</strong> XXX$ / سنوياً</p>
                         <p><strong>البرامج الإدارية:</strong> XXX$ / سنوياً</p>
-                        <small style="color: var(--text-muted);">* الرسوم قابلة للتغيير. تواصل معنا لمعرفة خطط الدفع بالتفصيل.</small>
+                        <small style="color: var(--text-muted);">* الرسوم قابلة للتغيير. تواصل معنا لمعرفة خطط الدفع
+                            بالتفصيل.</small>
                     </div>
                 </div>
-                
+
                 <div>
                     <h3 style="color: var(--primary); margin-bottom: 1.5rem;">خطوات التسجيل</h3>
                     <ol class="steps-list">
@@ -1127,7 +1168,8 @@
                     </ol>
 
                     <div style="text-align: center; margin-top: 2rem;">
-                        <a href="#contact" class="btn btn-primary" style="width: 100%;">سجل الآن</a>
+                        <a href="https://wa.me/967714912285" target="_blank" class="btn btn-primary"
+                            style="width: 100%;">سجل الآن عبر الواتساب</a>
                     </div>
                 </div>
             </div>
@@ -1145,95 +1187,146 @@
             <h2 class="section-title">الأسئلة الشائعة</h2>
             <div style="max-width: 800px; margin: 0 auto;">
                 <div class="faq-item">
-                    <button class="faq-question">هل التسجيل مفتوح؟ <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>يرجى التحقق من قسم القبول لمعرفة حالة التسجيل الحالية، حيث يتم تحديثها ديناميكياً بناءً على توفر المقاعد.</p></div>
+
+
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">ما هي متطلبات القبول؟ <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>تحتاج إلى شهادة الثانوية العامة (أو ما يعادلها)، ومستندات شخصية، وصور بحجم جواز السفر.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">ما هي متطلبات القبول؟ <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>شهادة الثانوية العامة , صور شخصية .</p>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">ما هي برامج الدبلوم المتاحة؟ <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>نقدم برامج طبية (مساعد طبيب، مختبرات، قبالة، تمريض) وبرامج إدارية (تقنية معلومات، هندسة برمجيات، محاسبة، تصميم جرافيك، إدارة مكاتب).</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">ما هي تخصصات الدبلوم المتاحة<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>نقدم تخصصا طبية (مساعد طبيب، مختبرات، قبالة، تمريض) وتخصصات إدارية (تقنية معلومات، هندسة
+
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">كم مدة كل برنامج؟ <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>تستغرق البرامج الطبية 3 سنوات لإكمالها، بينما تستغرق البرامج الإدارية سنتين.</p></div>
+            </div>
+            <div class="faq-item">
+
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">هل الدبلوم معتمد؟ <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>نعم، جميع شهادات الدبلوم لدينا معتمدة بالكامل عند التخرج من قبل الجهات المختصة.</p>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">هل الدبلوم معتمد؟ <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>نعم، جميع شهادات الدبلوم لدينا معتمدة بالكامل عند التخرج من قبل الجهات المختصة.</p></div>
-                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="container reveal">
+        <h2 class="section-title">مميزات المعهد</h2>
+        <div class="cards-grid">
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <i class="fas fa-users card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <h5 class="card-title" style="margin-bottom: 0.5rem;">كادر متخصص في جميع الاقسام .</h4>
+
+            </div>
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <i class="fas fa-microscope card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <h5 class="card-title" style="margin-bottom: 0.5rem;">معامل حديثة طبية وادارية متكاملة ومجهزة .</h4>
+
+            </div>
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <i class="fas fa-certificate card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <h5 class="card-title" style="margin-bottom: 0.5rem;">تأهيل متميز وشهادات معتمدة يُمنح بموجبها الطالب
+                    تصريح مزاولة مهنة .</h4>
+
+            </div>
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <i class="fas fa-hand-holding-usd card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <h5 class="card-title" style="margin-bottom: 0.5rem;">رسوم مناسبة ونظام تقسيط متميز .</h4>
+
+            </div>
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <i class="fas fa-gift card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <h5 class="card-title" style="margin-bottom: 0.5rem;">دورات مجانية للطلاب المسجلين في جميع التخصصات.
+                    </h4>
+
+            </div>
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <i class="fas fa-lightbulb card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <h5 class="card-title" style="margin-bottom: 0.5rem;">دورات احترافية في تطوير الذات والتعامل مع الاخرين
+                    . </h4>
+
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container reveal">
-        <h2 class="section-title">اتصل بنا</h2>
-        <div class="contact-grid">
-            <div>
-                <div class="contact-info-item">
-                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <div>
-                        <h4>العنوان</h4>
-                        <p style="color: var(--text-muted);">الحسين – سوق الأحد – خلف صرافة الشامل.</p>
-                    </div>
+    <!-- Competitions Section -->
+    <section id="competitions" class="bg-alt reveal">
+        <div class="container">
+            <h2 class="section-title"> مسابقات المعهد الدورية</h2>
+            <p
+                style="text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                أطلق العنان لموهبتك وكن من المتميزين! مسابقات دورية في نهاية كل ترم دراسي بهدف اكتشاف المواهب وتنمية
+                الإبداع وروح التنافس الشريف.
+            </p>
+
+            <!-- مجالات المسابقات -->
+            <h3 style="text-align: center; color: var(--primary); margin-bottom: 2rem; font-size: 1.4rem;"><i
+                    class="fas fa-layer-group" style="margin-left: 8px;"></i> مجالات المسابقات</h3>
+            <div class="cards-grid" style="margin-bottom: 3rem;">
+                <div class="card" style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-paint-brush card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <h4 class="card-title" style="margin-bottom: 0.5rem;">التصميم والإعلام</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        تصميم جرافيكي · تصوير فوتوغرافي · مونتاج وصناعة محتوى
+                    </p>
                 </div>
-                <div class="contact-info-item">
-                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                    <div>
-                        <h4>الهاتف</h4>
-                        <p style="color: var(--text-muted;" dir="ltr">555555555888</p>
-                    </div>
+                <div class="card" style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-pen-nib card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <h4 class="card-title" style="margin-bottom: 0.5rem;">الفنون والخط</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        رسم حر · رسم رقمي · رسم تشكيلي · خط عربي
+                    </p>
                 </div>
-                <div class="contact-info-item">
-                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                    <div>
-                        <h4>البريد الإلكتروني</h4>
-                        <p style="color: var(--text-muted);">hhfjfxh258@gmail.com</p>
-                    </div>
-                </div>
-                <div class="contact-info-item">
-                    <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-                    <div>
-                        <h4>واتساب</h4>
-                        <p style="color: var(--text-muted;" dir="ltr">+967714912666</p>
-                    </div>
-                </div>
-                <div class="contact-info-item">
-                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                    <div>
-                        <h4>ساعات الاستفسار</h4>
-                        <p style="color: var(--text-muted);">متاح طوال أيام الأسبوع.</p>
-                    </div>
+                <div class="card" style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-code card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <h4 class="card-title" style="margin-bottom: 0.5rem;">اللغات والتكنولوجيا</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        تحدي الكلمات الإنجليزية · البرمجة والتطوير
+                    </p>
                 </div>
             </div>
 
-            <div class="card">
-                <h3 style="margin-bottom: 1.5rem; color: var(--primary);">أرسل لنا رسالة</h3>
-                <form>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="الاسم الكامل" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="البريد الإلكتروني" required>
-                        </div>
-                    </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                        <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="رقم الهاتف" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="الموضوع" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" rows="5" placeholder="الرسالة" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
-                </form>
+            <!-- الجوائز ومن يشارك -->
+            <div class="about-grid">
+                <div class="card" style="padding: 2rem;">
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem;"><i class="fas fa-trophy"
+                            style="margin-left: 8px; color: #fbbf24;"></i> جوائز المسابقة</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">ينتظر الفائزين بالمراكز الأولى جوائز قيمة
+                        (عينية ومالية) بالإضافة إلى:</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;"><i
+                                class="fas fa-check-circle" style="color: var(--primary);"></i> شهادات تميز وتكريم رسمي
+                        </li>
+                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;"><i
+                                class="fas fa-check-circle" style="color: var(--primary);"></i> عرض أعمال الفائزين عبر
+                            منصات المعهد</li>
+                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;"><i
+                                class="fas fa-check-circle" style="color: var(--primary);"></i> تسليط الضوء على المواهب
+                            الطلابية</li>
+                    </ul>
+                </div>
+                <div class="card" style="padding: 2rem;">
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem;"><i class="fas fa-users"
+                            style="margin-left: 8px;"></i> من يحق له المشاركة؟</h3>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;"><i
+                                class="fas fa-user-graduate" style="color: var(--primary);"></i> طلاب المعهد الحاليين من
+                            مختلف المستويات والتخصصات</li>
+                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;"><i
+                                class="fas fa-user-graduate" style="color: var(--primary);"></i> خريجو المعهد للأعوام
+                            السابقة</li>
+                    </ul>
+                    <a href="https://wa.me/967714912285?text=مرحباً، أود الاستفسار عن مسابقات المعهد." target="_blank"
+                        class="btn btn-primary" style="width: 100%; text-align: center;">شارك معنا الآن عبر الواتساب</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1243,7 +1336,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <h4 class="footer-title">معهد تقنيات المستقبل الحديثة</h4>
+                    <h4 class="footer-title">معهد تقنيات المستقبل</h4>
                     <p style="color: var(--text-muted); margin-bottom: 1rem;">"لسنا الوحيدين، لكننا الأفضل."</p>
                     <div class="social-links">
                         <a href="#" title="فيسبوك (قريباً)"><i class="fab fa-facebook-f"></i></a>
@@ -1251,32 +1344,25 @@
                         <a href="#" title="تيليجرام (قريباً)"><i class="fab fa-telegram-plane"></i></a>
                     </div>
                 </div>
-                <div>
-                    <h4 class="footer-title">روابط سريعة</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#about">عن المعهد</a></li>
-                        <li><a href="#departments">الأقسام</a></li>
-                        <li><a href="#admission">التسجيل</a></li>
-                    </ul>
-                </div>
+
                 <div>
                     <h4 class="footer-title">تواصل معنا</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> الحسين – سوق الأحد</li>
+                        <li><i class="fas fa-map-marker-alt"></i> الحصين – سوق الأحد</li>
                         <li dir="ltr" style="text-align: right;"><i class="fas fa-phone-alt"></i> 555555555888</li>
                         <li><i class="fas fa-envelope"></i> hhfjfxh258@gmail.com</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>جميع الحقوق محفوظة &copy; 2026 معهد تقنيات المستقبل الحديثة للعلوم الطبية والإدارية.</p>
+                <p>جميع الحقوق محفوظة &copy; 2026 معهد تقنيات المستقبل الحديث للعلوم الطبية والإدارية.</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/967714912666?text=مرحباً،%20أود%20الاستفسار%20عن%20التسجيل." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/967714912285?text=مرحباً،%20أود%20الاستفسار%20عن%20التسجيل." class="whatsapp-float"
+        target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -1288,11 +1374,11 @@
     <!-- Scripts -->
     <script>
         // Registration Status Logic
-        const registrationOpen = true; 
-        
+        const registrationOpen = true;
+
         document.addEventListener('DOMContentLoaded', () => {
             const statusDiv = document.getElementById('registration-status');
-            if(registrationOpen) {
+            if (registrationOpen) {
                 statusDiv.innerHTML = '<i class="fas fa-check-circle" style="color: #22c55e; margin-left: 8px;"></i> التسجيل مفتوح حالياً، ويمكنك التقديم الآن.';
                 statusDiv.style.color = 'var(--text-main)';
                 statusDiv.style.borderRight = '4px solid #22c55e'; // RTL adjustment
@@ -1306,7 +1392,7 @@
         // Mobile Menu Toggle
         const mobileToggle = document.getElementById('mobile-toggle');
         const navLinks = document.querySelector('.nav-links');
-        
+
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
@@ -1315,7 +1401,7 @@
         const dropdowns = document.querySelectorAll('.dropdown');
         dropdowns.forEach(dropdown => {
             dropdown.addEventListener('click', (e) => {
-                if(window.innerWidth <= 768) {
+                if (window.innerWidth <= 768) {
                     dropdown.classList.toggle('active');
                 }
             });
@@ -1324,7 +1410,7 @@
         // Theme Toggle (Dark/Light Mode)
         const themeToggleBtn = document.getElementById('theme-toggle');
         const htmlElement = document.documentElement;
-        
+
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
             htmlElement.setAttribute('data-theme', savedTheme);
@@ -1334,14 +1420,14 @@
         themeToggleBtn.addEventListener('click', () => {
             const currentTheme = htmlElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
+
             htmlElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
         });
 
         function updateThemeIcon(theme) {
-            if(theme === 'dark') {
+            if (theme === 'dark') {
                 themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
             } else {
                 themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
@@ -1350,7 +1436,7 @@
 
         // Scroll Reveal Animations
         const reveals = document.querySelectorAll('.reveal');
-        
+
         function reveal() {
             const windowHeight = window.innerHeight;
             const elementVisible = 100;
@@ -1362,13 +1448,13 @@
                 }
             });
         }
-        
+
         window.addEventListener('scroll', reveal);
         reveal();
 
         // Back to top button
         const backToTopBtn = document.getElementById('back-to-top');
-        
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
                 backToTopBtn.classList.add('visible');
@@ -1406,10 +1492,10 @@
 
         const statsSection = document.getElementById('statistics');
         window.addEventListener('scroll', () => {
-            if(hasCounted) return;
-            
+            if (hasCounted) return;
+
             const rect = statsSection.getBoundingClientRect();
-            if(rect.top < window.innerHeight) {
+            if (rect.top < window.innerHeight) {
                 runCounters();
                 hasCounted = true;
             }
@@ -1417,20 +1503,21 @@
 
         // FAQ Accordion
         const faqQuestions = document.querySelectorAll('.faq-question');
-        
+
         faqQuestions.forEach(question => {
             question.addEventListener('click', () => {
                 const item = question.parentElement;
-                
+
                 document.querySelectorAll('.faq-item').forEach(otherItem => {
-                    if(otherItem !== item) {
+                    if (otherItem !== item) {
                         otherItem.classList.remove('active');
                     }
                 });
-                
+
                 item.classList.toggle('active');
             });
         });
     </script>
 </body>
-</html>
+
+</html
