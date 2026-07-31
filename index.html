@@ -149,13 +149,12 @@
         }
 
         .logo {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: var(--primary);
             display: flex;
             align-items: center;
-            gap: 10px;
-            max-width: 280px;
+            gap: 8px;
             line-height: 1.2;
         }
 
@@ -226,11 +225,11 @@
 
         /* Hero Section */
         .hero-split {
-            min-height: 100vh;
+            min-height: auto;
             display: flex;
             align-items: center;
-            padding-top: 100px;
-            padding-bottom: 50px;
+            padding-top: 20px;
+            padding-bottom: 40px;
             background-color: var(--bg-main);
             color: var(--text-main);
         }
@@ -266,19 +265,48 @@
         }
 
         .hero-image-content {
-            flex: 1;
-            min-width: 300px;
             display: flex;
             justify-content: center;
+            margin-top: 100px;
+            margin-bottom: 0px;
+            padding: 0 20px;
             animation: fadeInUp 1s ease 0.4s backwards;
         }
 
         .hero-image-content img {
             max-width: 100%;
             height: auto;
-            max-height: 80vh;
+            max-height: 45vh;
             object-fit: contain;
             border-radius: 16px;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Floating Theme Toggle */
+        .theme-toggle-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: var(--shadow-lg);
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            z-index: 1000;
+        }
+
+        .theme-toggle-float:hover {
+            transform: scale(1.1) translateY(-3px);
+            background: var(--primary-light);
+            color: #0F172A;
         }
 
         .btn {
@@ -839,6 +867,11 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .logo {
+                font-size: 0.8rem;
+                max-width: 80%;
+            }
+
             .nav-links {
                 position: absolute;
                 top: 80px;
@@ -897,7 +930,7 @@
         <div class="container nav-container">
             <a href="#" class="logo">
                 <i class="fas fa-graduation-cap"></i>
-
+                <span>معهد تقنيات المستقبل الحديث للعلوم الطبية والإدارية</span>
             </a>
 
             <ul class="nav-links">
@@ -913,11 +946,6 @@
                 </li>
                 <li><a href="#admission">التسجيل</a></li>
                 <li><a href="#features">مميزات المعهد</a></li>
-                <li>
-                    <button class="theme-toggle" id="theme-toggle" aria-label="تبديل المظهر">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </li>
             </ul>
 
             <div class="mobile-toggle" id="mobile-toggle">
@@ -1339,8 +1367,10 @@
     </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-
+    <!-- Floating Theme Toggle -->
+    <button class="theme-toggle-float" id="theme-toggle" aria-label="تبديل المظهر">
+        <i class="fas fa-sun"></i>
+    </button>
 
     <!-- Back to top -->
     <button class="back-to-top" id="back-to-top">
@@ -1404,9 +1434,9 @@
 
         function updateThemeIcon(theme) {
             if (theme === 'dark') {
-                themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-            } else {
                 themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
             }
         }
 
