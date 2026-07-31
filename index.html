@@ -289,24 +289,48 @@
             left: 30px;
             width: 50px;
             height: 50px;
-            background: var(--primary);
-            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
-            box-shadow: var(--shadow-lg);
+            font-size: 1.4rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
             cursor: pointer;
-            transition: var(--transition);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: none;
             z-index: 1000;
         }
 
+        /* Light Mode style for the button */
+        [data-theme="light"] .theme-toggle-float {
+            background: #ffffff;
+            color: #ff9800;
+            /* Warm Sun color */
+            border: 1px solid #ffe0b2;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.25);
+        }
+
+        /* Dark Mode style for the button */
+        [data-theme="dark"] .theme-toggle-float {
+            background: #1e293b;
+            color: #e2e8f0;
+            /* Silver Moon color */
+            border: 1px solid #334155;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
         .theme-toggle-float:hover {
-            transform: scale(1.1) translateY(-3px);
-            background: var(--primary-light);
-            color: #0F172A;
+            transform: scale(1.1) rotate(15deg);
+        }
+
+        [data-theme="light"] .theme-toggle-float:hover {
+            background: #fff8e1;
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+        }
+
+        [data-theme="dark"] .theme-toggle-float:hover {
+            background: #0f172a;
+            box-shadow: 0 6px 20px rgba(226, 232, 240, 0.15);
         }
 
         .btn {
@@ -1369,7 +1393,7 @@
 
     <!-- Floating Theme Toggle -->
     <button class="theme-toggle-float" id="theme-toggle" aria-label="تبديل المظهر">
-        <i class="fas fa-sun"></i>
+        <i class="fa-solid fa-sun"></i>
     </button>
 
     <!-- Back to top -->
@@ -1417,11 +1441,9 @@
         const themeToggleBtn = document.getElementById('theme-toggle');
         const htmlElement = document.documentElement;
 
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            htmlElement.setAttribute('data-theme', savedTheme);
-            updateThemeIcon(savedTheme);
-        }
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
 
         themeToggleBtn.addEventListener('click', () => {
             const currentTheme = htmlElement.getAttribute('data-theme');
@@ -1434,9 +1456,9 @@
 
         function updateThemeIcon(theme) {
             if (theme === 'dark') {
-                themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+                themeToggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
             } else {
-                themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+                themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
             }
         }
 
@@ -1497,15 +1519,17 @@
         }
 
         const statsSection = document.getElementById('statistics');
-        window.addEventListener('scroll', () => {
-            if (hasCounted) return;
+        if (statsSection) {
+            window.addEventListener('scroll', () => {
+                if (hasCounted) return;
 
-            const rect = statsSection.getBoundingClientRect();
-            if (rect.top < window.innerHeight) {
-                runCounters();
-                hasCounted = true;
-            }
-        });
+                const rect = statsSection.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    runCounters();
+                    hasCounted = true;
+                }
+            });
+        }
 
         // FAQ Accordion
         const faqQuestions = document.querySelectorAll('.faq-question');
