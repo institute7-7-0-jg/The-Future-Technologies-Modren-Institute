@@ -225,7 +225,7 @@
 
         /* Hero Section */
         .hero-split {
-            min-height: auto;
+
             display: flex;
             align-items: center;
             padding-top: 20px;
@@ -460,9 +460,32 @@
         }
 
         .card-icon {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--primary);
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .card:hover .card-icon {
+            transform: scale(1.15) rotate(-6deg);
+            color: var(--secondary);
+        }
+
+        .about-feature-card {
+            transition: var(--transition);
+        }
+
+        .about-feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .about-feature-card i {
+            transition: transform 0.3s ease;
+        }
+
+        .about-feature-card:hover i {
+            transform: scale(1.2);
         }
 
         .card-title {
@@ -1002,10 +1025,10 @@
 
     <!-- About Section -->
     <section id="about" class="container reveal">
-        <h2 class="section-title">عن المعهد</h2>
+
         <div class="about-grid">
-            <div class="about-text">
-                <h3>نبذة</h3>
+            <div class="about-text" style="margin-top: 0;">
+                <h3 style="margin-top: 0;">النبذة</h3>
                 <p>تأسس معهد تقنيات المستقبل الحديث للعلوم الطبية والادارية في عام 2024 لتقديم تعليم متميز في المجالات
                     الطبية والادارية مع إعداد خريجين مؤهلين لسوق العمل التنافسي اليوم.</p>
 
@@ -1014,108 +1037,75 @@
 
                 <h3>الرسالة</h3>
                 <p>تقديم تعليم عالي الجودة يجمع بين المعرفة الأكاديمية والتدريب العملي في بيئة تعليمية حديثة.</p>
+
             </div>
             <div>
+                <h1> الاقسام الطبية</h1>
 
-                <div class="container reveal">
-                    <h2 class="section-title">الاهداف</h2>
-                    <div class="about-features">
-                        <div class="about-feature-card">
-                            <i class="fas fa-check-circle"
-                                style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;"></i>
-                            <h4>إعداد خريجين أكفاء</h4>
-                        </div>
-                        <div class="about-feature-card">
-                            <i class="fas fa-check-circle"
-                                style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;"></i>
-                            <h4>تطوير المهارات الفنية</h4>
-                        </div>
-                        <div class="about-feature-card">
-                            <i class="fas fa-check-circle"
-                                style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;"></i>
-                            <h4>تشجيع الابتكار</h4>
-                        </div>
-                        <div class="about-feature-card">
-                            <i class="fas fa-check-circle"
-                                style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;"></i>
-                            <h4>تلبية احتياجات سوق العمل</h4>
-                        </div>
-                    </div>
+
+
+                <div class="card">
+                    <i class="fas fa-microscope card-icon"></i>
+                    <h4 class="card-title">مختبرات طبية</h4>
+                    <span class="card-duration">مدة الدراسة: 3 سنوات</span>
+                    <p>يركز على الفحوصات المخبرية، والتشخيص، والتحليلات الطبية باستخدام
+                        معدات مخبرية حديثة.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-baby card-icon"></i>
+                    <h4 class="card-title">قبالة</h4>
+                    <span class="card-duration">مدة الدراسة: 3 سنوات</span>
+                    <p>يوفر تعليماً مهنياً في الرعاية الصحية للأم، ورعاية الحمل،
+                        والولادة.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-notes-medical card-icon"></i>
+                    <h4 class="card-title">تمريض</h4>
+                    <span class="card-duration">مدة الدراسة: 3 سنوات</span>
+                    <p>تطوير مهارات التمريض للمستشفيات والعيادات ومؤسسات الرعاية الصحية.
+                    </p>
                 </div>
             </div>
-    </section>
+        </div>
 
-    <!-- Departments Section -->
-    <section id="departments" class="bg-alt">
-        <div class="container reveal">
-            <h2 class="section-title">الأقسام الأكاديمية</h2>
-
-            <div id="medical" class="dept-category">
-                <h3><i class="fas fa-heartbeat"></i> الأقسام الطبية</h3>
-                <div class="cards-grid">
-                    <div class="card">
-                        <i class="fas fa-user-md card-icon"></i>
-                        <h4 class="card-title">مساعد طبيب</h4>
-                        <span class="card-duration">مدة الدراسة: 3 سنوات</span>
-                        <p>إعداد الطلاب لمساعدة الأطباء في المستشفيات والمراكز الطبية من خلال التدريب السريري العملي.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-microscope card-icon"></i>
-                        <h4 class="card-title">مختبرات طبية</h4>
-                        <span class="card-duration">مدة الدراسة: 3 سنوات</span>
-                        <p>يركز على الفحوصات المخبرية، والتشخيص، والتحليلات الطبية باستخدام معدات مخبرية حديثة.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-baby card-icon"></i>
-                        <h4 class="card-title">قبالة</h4>
-                        <span class="card-duration">مدة الدراسة: 3 سنوات</span>
-                        <p>يوفر تعليماً مهنياً في الرعاية الصحية للأم، ورعاية الحمل، والولادة.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-notes-medical card-icon"></i>
-                        <h4 class="card-title">تمريض</h4>
-                        <span class="card-duration">مدة الدراسة: 3 سنوات</span>
-                        <p>تطوير مهارات التمريض للمستشفيات والعيادات ومؤسسات الرعاية الصحية.</p>
-                    </div>
+        <div id="admin" class="dept-category">
+            <h3><i class="fas fa-briefcase"></i> الأقسام الإدارية</h3>
+            <div class="cards-grid">
+                <div class="card">
+                    <i class="fas fa-laptop-code card-icon"></i>
+                    <h4 class="card-title">تقنية المعلومات (IT)</h4>
+                    <span class="card-duration">مدة الدراسة: سنتان</span>
+                    <p>تعلم الشبكات، وأنظمة الكمبيوتر، وقواعد البيانات، وتقنية
+                        المعلومات.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-code card-icon"></i>
+                    <h4 class="card-title">هندسة البرمجيات</h4>
+                    <span class="card-duration">مدة الدراسة: سنتان</span>
+                    <p>دراسة البرمجة، وتطوير البرمجيات، وتطبيقات الويب، وقواعد البيانات.
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-calculator card-icon"></i>
+                    <h4 class="card-title">المحاسبة</h4>
+                    <span class="card-duration">مدة الدراسة: سنتان</span>
+                    <p>تعلم المحاسبة المالية، وإدارة الأعمال، والأنظمة المحاسبية.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-pencil-ruler card-icon"></i>
+                    <h4 class="card-title">تصميم الجرافيك</h4>
+                    <span class="card-duration">مدة الدراسة: سنتان</span>
+                    <p>دراسة التصميم الرقمي، وبناء العلامات التجارية، والتواصل البصري،
+                        والبرامج الإبداعية.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-folder-open card-icon"></i>
+                    <h4 class="card-title">إدارة المكاتب</h4>
+                    <span class="card-duration">مدة الدراسة: سنتان</span>
+                    <p>إعداد الطلاب للمهن الإدارية والتنظيمية وإدارة المكاتب.</p>
                 </div>
             </div>
-
-            <div id="admin" class="dept-category">
-                <h3><i class="fas fa-briefcase"></i> الأقسام الإدارية</h3>
-                <div class="cards-grid">
-                    <div class="card">
-                        <i class="fas fa-laptop-code card-icon"></i>
-                        <h4 class="card-title">تقنية المعلومات (IT)</h4>
-                        <span class="card-duration">مدة الدراسة: سنتان</span>
-                        <p>تعلم الشبكات، وأنظمة الكمبيوتر، وقواعد البيانات، وتقنية المعلومات.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-code card-icon"></i>
-                        <h4 class="card-title">هندسة البرمجيات</h4>
-                        <span class="card-duration">مدة الدراسة: سنتان</span>
-                        <p>دراسة البرمجة، وتطوير البرمجيات، وتطبيقات الويب، وقواعد البيانات.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-calculator card-icon"></i>
-                        <h4 class="card-title">المحاسبة</h4>
-                        <span class="card-duration">مدة الدراسة: سنتان</span>
-                        <p>تعلم المحاسبة المالية، وإدارة الأعمال، والأنظمة المحاسبية.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-pencil-ruler card-icon"></i>
-                        <h4 class="card-title">تصميم الجرافيك</h4>
-                        <span class="card-duration">مدة الدراسة: سنتان</span>
-                        <p>دراسة التصميم الرقمي، وبناء العلامات التجارية، والتواصل البصري، والبرامج الإبداعية.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-folder-open card-icon"></i>
-                        <h4 class="card-title">إدارة المكاتب</h4>
-                        <span class="card-duration">مدة الدراسة: سنتان</span>
-                        <p>إعداد الطلاب للمهن الإدارية والتنظيمية وإدارة المكاتب.</p>
-                    </div>
-                </div>
-            </div>
+        </div>
         </div>
     </section>
 
@@ -1155,14 +1145,16 @@
                 <i class="fas fa-certificate card-icon" style="font-size: 2rem;"></i>
                 <h4 style="margin-bottom: 0;">شهادة دبلوم معتمدة</h4>
             </div>
-        </div>
+
+            <div class="card" style="padding: 1.5rem; text-align: center;">
+                <i class="fas fa-certificate card-icon" style="font-size: 2rem;"></i>
+                <h4 style="margin-bottom: 0;">تم اختيار معهدنا ليكون مركزًا اختباريًا لثلاثة معاهد تعليمية , تقديرًا لما
+                    يتميز به من بيئة تعليمية منظمة وتجهيزات
+                    مناسبة وكفاءة في ادارة وتنظيم الاختبارات</h4>
+            </div>
 
         </div>
     </section>
-
-
-
-
 
     <!-- Achievements Section -->
     <section class="bg-alt reveal">
@@ -1173,10 +1165,12 @@
                     style="text-align: center; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; padding: 3rem;">
                     <i class="fas fa-trophy card-icon"
                         style="font-size: 4rem; color: #fbbf24; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 1rem;">المركز الأول على مستوى
+                    <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 1rem;">
+                        المركز الأول على مستوى
                         معاهد الجمهورية</h3>
                     <p style="font-size: 1.2rem; color: var(--text-main); margin-bottom: 1.5rem;">
-                        نفخر في معهد تقنيات المستقبل بحصول طالبتنا المتميزة <strong>أزال الدعيس</strong> على المركز
+                        نفخر في معهد تقنيات المستقبل بحصول طالبتنا المتميزة <strong>أزال
+                            الدعيس</strong> على المركز
                         الأول في قسم المحاسبة على مستوى جميع المعاهد في الجمهورية اليمنية.
                     </p>
                     <span
@@ -1195,34 +1189,52 @@
         <div class="admission-content">
             <div class="admission-grid">
                 <div>
-                    <h3 style="color: var(--primary); margin-bottom: 1.5rem;">متطلبات القبول</h3>
-                    <ul style="list-style: disc; padding-right: 1.5rem; margin-bottom: 2rem;">
-                        <li style="margin-bottom: 0.5rem;">شهادة الثانوية العامة.</li><br>
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem;"><i class="fas fa-clipboard-check"
+                            style="margin-left: 8px;"></i>متطلبات القبول</h3>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-file-invoice" style="color: var(--primary); font-size: 1.1rem;"></i>شهادة
+                            الثانوية العامة.
 
-                        <li style="margin-bottom: 0.5rem;">صور شخصية .</li><br><br><br>
+                        </li>
+
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-portrait" style="color: var(--primary); font-size: 1.1rem;"></i>صور شخصية.
+
+                        </li>
                     </ul>
 
-                    <h3 style="color: var(--primary); margin-bottom: 1.5rem;">الرسوم الدراسية</h3>
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem;"><i class="fas fa-coins"
+                            style="margin-left: 8px;"></i>الرسوم
+                        الدراسية</h3>
                     <div style="margin-bottom: 2rem;">
-                        <a href="https://wa.me/967737949202?text=مرحباً،%20أود%20الاستفسار%20عن%20الرسوم%20الدراسية%20وخطط%20الدفع."
-                            target="_blank" class="btn btn-primary" style="width: 100%; text-align: center;">تواصل معنا
+                        <a href="https://wa.me/967777723785?text=مرحباً،%20أود%20الاستفسار%20عن%20الرسوم%20الدراسية%20وخطط%20الدفع."
+                            target="_blank" class="btn btn-primary" style="width: 100%; text-align: center;"><i
+                                class="fab fa-whatsapp" style="margin-left: 8px; font-size: 1.2rem;"></i>تواصل معنا
                             لمعرفة خطط الدفع بالتفصيل</a>
                     </div>
                 </div>
 
                 <div>
-                    <h3 style="color: var(--primary); margin-bottom: 1.5rem;">خطوات التسجيل</h3>
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem;"><i class="fas fa-list-ol"
+                            style="margin-left: 8px;"></i>خطوات
+                        التسجيل</h3>
                     <ol class="steps-list">
-
-                        <li>تقديم المستندات المطلوبة.</li>
-                        <li>تأكيد التسجيل.</li>
-                        <li>دفع الرسوم الدراسية.</li>
-                        <li>استلام البطاقة الجامعية.</li><br>
+                        <li><i class="fas fa-file-upload" style="color: var(--primary); margin-left: 8px;"></i>تقديم
+                            المستندات المطلوبة.</li>
+                        <li><i class="fas fa-user-check" style="color: var(--primary); margin-left: 8px;"></i>تأكيد
+                            القبول والتسجيل.</li>
+                        <li><i class="fas fa-credit-card" style="color: var(--primary); margin-left: 8px;"></i>دفع
+                            الرسوم الدراسية.</li>
+                        <li><i class="fas fa-id-badge" style="color: var(--primary); margin-left: 8px;"></i>استلام
+                            البطاقة الجامعية.</li>
                     </ol>
 
                     <div style="text-align: center; margin-top: 2rem;">
-                        <a href="https://wa.me/967737949202" target="_blank" class="btn btn-primary"
-                            style="width: 100%;">سجل الآن عبر الواتساب</a>
+                        <a href="https://wa.me/967777723785" target="_blank" class="btn btn-primary"
+                            style="width: 100%;"><i class="fab fa-whatsapp"
+                                style="margin-left: 8px; font-size: 1.2rem;"></i>سجل الآن
+                            عبر الواتساب</a>
                     </div>
                 </div>
             </div>
@@ -1234,38 +1246,36 @@
         </div>
     </section>
 
-    <!-- FAQs -->
+    <!-- FAQs Section -->
     <section class="bg-alt reveal">
         <div class="container">
             <h2 class="section-title">الأسئلة الشائعة</h2>
             <div style="max-width: 800px; margin: 0 auto;">
                 <div class="faq-item">
-
-
+                    <button class="faq-question">
+                        <span><i class="fas fa-graduation-cap" style="color: var(--primary); margin-left: 10px;"></i>هل
+                            أستطيع إكمال دراستي بعد التخرج؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، يمكن لخريجي المعهد مواصلة دراستهم للحصول على درجة
+                            البكالوريوس في الجامعات.</p>
+                    </div>
                 </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span><i class="fas fa-certificate" style="color: var(--primary); margin-left: 10px;"></i>هل
+                            شهادات الدبلوم معتمدة ورسمية؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، جميع شهادات الدبلوم لدينا معتمدة بالكامل عند التخرج من قبل
+                            الجهات المعنية ويُمنح بموجبها الطالب تصريح مزاولة المهنة.</p>
+                    </div>
+                </div>
+
+
             </div>
-
-
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">هل استطيع اكمال دراستي بعد التخرج من المعهد؟<i
-                    class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-                <p> نعم , يمكن لخريجي المعهد مواصلة دراستهم للحصول على درجة البكالوريوس.</p>
-            </div>
-        </div>
-        </div>
-        </div>
-
-
-
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">هل الدبلوم معتمد؟ <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-                <p>نعم، جميع شهادات الدبلوم لدينا معتمدة بالكامل عند التخرج من قبل الجهات المختصة.</p>
-            </div>
-        </div>
         </div>
         </div>
     </section>
@@ -1276,34 +1286,40 @@
         <div class="cards-grid">
             <div class="card" style="text-align: center; padding: 2rem;">
                 <i class="fas fa-users card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                <h5 class="card-title" style="margin-bottom: 0.5rem;">كادر متخصص في جميع الاقسام .</h4>
+                <h5 class="card-title" style="margin-bottom: 0.5rem;">كادر متخصص في جميع
+                    الاقسام .</h4>
 
             </div>
             <div class="card" style="text-align: center; padding: 2rem;">
                 <i class="fas fa-microscope card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                <h5 class="card-title" style="margin-bottom: 0.5rem;">معامل حديثة طبية وادارية متكاملة ومجهزة .</h4>
+                <h5 class="card-title" style="margin-bottom: 0.5rem;">معامل حديثة طبية
+                    وادارية متكاملة ومجهزة .</h4>
 
             </div>
             <div class="card" style="text-align: center; padding: 2rem;">
                 <i class="fas fa-certificate card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                <h5 class="card-title" style="margin-bottom: 0.5rem;">تأهيل متميز وشهادات معتمدة يُمنح بموجبها الطالب
+                <h5 class="card-title" style="margin-bottom: 0.5rem;">تأهيل متميز وشهادات
+                    معتمدة يُمنح بموجبها الطالب
                     تصريح مزاولة مهنة .</h4>
 
             </div>
             <div class="card" style="text-align: center; padding: 2rem;">
                 <i class="fas fa-hand-holding-usd card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                <h5 class="card-title" style="margin-bottom: 0.5rem;">رسوم مناسبة ونظام تقسيط متميز .</h4>
+                <h5 class="card-title" style="margin-bottom: 0.5rem;">رسوم مناسبة ونظام
+                    تقسيط متميز .</h4>
 
             </div>
             <div class="card" style="text-align: center; padding: 2rem;">
                 <i class="fas fa-gift card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                <h5 class="card-title" style="margin-bottom: 0.5rem;">دورات مجانية للطلاب المسجلين في جميع التخصصات.
+                <h5 class="card-title" style="margin-bottom: 0.5rem;">دورات مجانية للطلاب
+                    المسجلين في جميع التخصصات.
                     </h4>
 
             </div>
             <div class="card" style="text-align: center; padding: 2rem;">
                 <i class="fas fa-lightbulb card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                <h5 class="card-title" style="margin-bottom: 0.5rem;">دورات احترافية في تطوير الذات والتعامل مع الاخرين
+                <h5 class="card-title" style="margin-bottom: 0.5rem;">دورات احترافية في
+                    تطوير الذات والتعامل مع الاخرين
                     . </h4>
 
             </div>
@@ -1316,17 +1332,21 @@
             <h2 class="section-title"> مسابقات المعهد الدورية</h2>
             <p
                 style="text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-                أطلق العنان لموهبتك وكن من المتميزين! مسابقات دورية في نهاية كل ترم دراسي بهدف اكتشاف المواهب وتنمية
+                أطلق العنان لموهبتك وكن من المتميزين! مسابقات دورية في نهاية كل ترم دراسي
+                بهدف اكتشاف المواهب وتنمية
                 الإبداع وروح التنافس الشريف.
             </p>
 
             <!-- مجالات المسابقات -->
-            <h3 style="text-align: center; color: var(--primary); margin-bottom: 2rem; font-size: 1.4rem;"><i
-                    class="fas fa-layer-group" style="margin-left: 8px;"></i> مجالات المسابقات</h3>
+            <h3 style="text-align: center; color: var(--primary); margin-bottom: 2rem; font-size: 1.4rem;">
+                <i class="fas fa-layer-group" style="margin-left: 8px;"></i> مجالات
+                المسابقات
+            </h3>
             <div class="cards-grid" style="margin-bottom: 3rem;">
                 <div class="card" style="text-align: center; padding: 2rem;">
                     <i class="fas fa-paint-brush card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                    <h4 class="card-title" style="margin-bottom: 0.5rem;">التصميم والإعلام</h4>
+                    <h4 class="card-title" style="margin-bottom: 0.5rem;">التصميم والإعلام
+                    </h4>
                     <p style="color: var(--text-muted); font-size: 0.9rem;">
                         تصميم جرافيكي · تصوير فوتوغرافي · مونتاج وصناعة محتوى
                     </p>
@@ -1340,7 +1360,8 @@
                 </div>
                 <div class="card" style="text-align: center; padding: 2rem;">
                     <i class="fas fa-code card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                    <h4 class="card-title" style="margin-bottom: 0.5rem;">اللغات والتكنولوجيا</h4>
+                    <h4 class="card-title" style="margin-bottom: 0.5rem;">اللغات
+                        والتكنولوجيا</h4>
                     <p style="color: var(--text-muted); font-size: 0.9rem;">
                         تحدي الكلمات الإنجليزية · البرمجة والتطوير
                     </p>
@@ -1351,44 +1372,55 @@
             <div class="about-grid">
                 <div class="card" style="padding: 2rem;">
                     <h3 style="color: var(--primary); margin-bottom: 1.5rem;"><i class="fas fa-trophy"
-                            style="margin-left: 8px; color: #fbbf24;"></i> جوائز المسابقة</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 1rem;">ينتظر الفائزين بالمراكز الأولى جوائز قيمة
+                            style="margin-left: 8px; color: #fbbf24;"></i> جوائز المسابقة
+                    </h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">ينتظر الفائزين
+                        بالمراكز الأولى جوائز قيمة
                         (عينية ومالية) بالإضافة إلى:</p>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;"><i
-                                class="fas fa-check-circle" style="color: var(--primary);"></i> شهادات تميز وتكريم رسمي
+                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-check-circle" style="color: var(--primary);"></i> شهادات تميز وتكريم رسمي
                         </li>
-                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;"><i
-                                class="fas fa-check-circle" style="color: var(--primary);"></i> عرض أعمال الفائزين عبر
-                            منصات المعهد</li>
-                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;"><i
-                                class="fas fa-check-circle" style="color: var(--primary);"></i> تسليط الضوء على المواهب
-                            الطلابية</li>
+                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-check-circle" style="color: var(--primary);"></i> عرض أعمال الفائزين عبر
+                            منصات المعهد
+                        </li>
+                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-check-circle" style="color: var(--primary);"></i> تسليط الضوء على المواهب
+                            الطلابية
+                        </li>
                     </ul>
                 </div>
                 <div class="card" style="padding: 2rem;">
                     <h3 style="color: var(--primary); margin-bottom: 1.5rem;"><i class="fas fa-users"
-                            style="margin-left: 8px;"></i> من يحق له المشاركة؟</h3>
+                            style="margin-left: 8px;"></i> من يحق له
+                        المشاركة؟</h3>
                     <ul style="list-style: none; padding: 0; margin-bottom: 1.5rem;">
-                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;"><i
-                                class="fas fa-user-graduate" style="color: var(--primary);"></i> طلاب المعهد الحاليين من
-                            مختلف المستويات والتخصصات</li>
-                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;"><i
-                                class="fas fa-user-graduate" style="color: var(--primary);"></i> خريجو المعهد للأعوام
-                            السابقة</li>
+                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-user-graduate" style="color: var(--primary);"></i> طلاب المعهد الحاليين من
+                            مختلف المستويات والتخصصات
+                        </li>
+                        <li style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-user-graduate" style="color: var(--primary);"></i> خريجو المعهد للأعوام
+                            السابقة
+                        </li>
                     </ul>
-                    <a href="https://wa.me/967737949202?text=مرحباً، أود الاستفسار عن مسابقات المعهد." target="_blank"
-                        class="btn btn-primary" style="width: 100%; text-align: center;">شارك معنا الآن عبر الواتساب</a>
+                    <a href="https://wa.me/967777723785?text=مرحباً، أود الاستفسار عن مسابقات المعهد." target="_blank"
+                        class="btn btn-primary" style="width: 100%; text-align: center;"><i class="fab fa-whatsapp"
+                            style="margin-left: 8px; font-size: 1.2rem;"></i>شارك معنا الآن
+                        عبر الواتساب</a>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <div class="footer-bottom">
-        <h3>العنـوان : مخـلاف - الحصـيـن - سـوق الاحـد - خـلـف الشـامـل للصـرافـة.</h3>
-    </div>
-    </div>
+
+    <div class="footer-bottom"
+        style="margin-top: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+        <h2>العنـوان : مخـلاف - الحصـيـن - سوق الاحـد - خلف الشـامـل للصـرافـة.</h2>
+
+    </div>>
     </footer>
 
     <!-- Floating Theme Toggle -->
